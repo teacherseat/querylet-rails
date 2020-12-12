@@ -71,3 +71,31 @@ It defines the following model methods:
 - self.query_compile_template
 - self.query_wrap_object
 - self.query_wrap_array
+
+## How to Install
+
+Create a queries directory eg.
+
+Create a directory to contain your queries
+
+```
+mkdir app/queries
+```
+
+Include `QueryletRails::Controller::Queryable` in your ApplicationController
+
+```rb
+require 'querylet_rails/controller/queryable'
+class ApplicationController < ActionController::Base
+  include QueryletRails::Controller::Queryable
+end
+```
+
+Include `QueryletRails::Model::Queryablek` in your ApplicationRecord
+
+```rb
+require 'querylet_rails/model/queryable'
+class ApplicationRecord < ActiveRecord::Base
+  include QueryletRails::Model::Queryable
+end
+```
