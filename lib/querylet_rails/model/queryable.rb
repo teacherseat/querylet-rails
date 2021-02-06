@@ -6,6 +6,10 @@ module QueryletRails
       extend ActiveSupport::Concern
       # override this function
 
+      def query relative_path, data={}
+        self.class.query relative_path, data
+      end
+
       def select_value relative_path, data={}
         self.class.select_value relative_path, data
       end
