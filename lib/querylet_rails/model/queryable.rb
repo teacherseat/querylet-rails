@@ -38,8 +38,8 @@ module QueryletRails
         self.class.current_tenant_id
       end
 
-      def set_tenant_id
-        self.class.set_tenant_id
+      def set_tenant_id tenant_id
+        self.class.set_tenant_id tenant_id
       end
 
       def reset_tenant_id
